@@ -226,6 +226,10 @@ def main(argv):
   if len(fasta_names) != len(set(fasta_names)):
     raise ValueError('All FASTA paths must have a unique basename.')
 
+# Let's set a tmpdir if not set
+if not os.getenv('TMPDIR'):
+    os.environ['TMPDIR'] = '/tmp'
+
   template_featurizer = templates.TemplateHitFeaturizer(
       mmcif_dir=FLAGS.template_mmcif_dir,
       max_template_date=FLAGS.max_template_date,
