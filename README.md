@@ -47,7 +47,7 @@ The following steps are required in order to run AlphaFold:
 
 ### Genetic databases
 
-This step requires `aria2c` to be installed on your machine.
+This step requires `curl` to be installed on your machine.
 
 AlphaFold needs multiple genetic (sequence) databases to run:
 
